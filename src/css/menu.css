@@ -1,0 +1,99 @@
+.menu-button-set {
+
+  position: absolute;
+  text-align: center;
+  background-color: transparent;
+  background: transparent;
+
+  left: 0;
+  top: 45%;
+  right: 0;
+  bottom: auto;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto;
+
+}
+
+.menu-pos-ingame {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.menu-pos-notingame {
+  left: 0;
+  top: 45%;
+  right: 0;
+  bottom: auto;
+}
+
+#credits{
+  left: 0;
+  top: 45%;
+  right: 0;
+  bottom: auto;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto;
+}
+
+.menu-button {
+  appearance: none;
+  outline: none;
+  border: none;
+
+  border: 1px solid orange;
+
+  background-color: white;
+  color: black;
+  text-shadow: 0 1px 1px var(--_btn-text-shadow);
+
+  font-size: 3vmin;
+  font-family: monospace;
+  padding-block: .75ch;
+  padding-inline: 2ch;
+  border-radius: 5px 20px;
+
+}
+
+#settingsMenu > li{
+  font-size: 3vmin;
+  display: flex;
+}
+
+.back-btn{
+  width: 100%;
+}
+
+.menu-text {
+  margin-right: 5px;
+  background-color: white;
+  color: black;
+  text-shadow: 0 1px 1px var(--_btn-text-shadow);
+
+  font-size: 3vmin;
+  font-family: monospace;
+  padding-block: .75ch;
+  padding-inline: 2ch;
+  border-radius: /* 5px  */20px;
+  border-color: black;
+  border-width: 5vmin;
+  width:-webkit-fill-available;
+}
+
+.menu-button:hover {
+  background-color: orange;
+  color: white;
+}
+
+.menu-button-set>li {
+  display: grid;
+
+  margin-top: 1rem;
+}

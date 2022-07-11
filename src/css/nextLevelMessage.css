@@ -1,0 +1,66 @@
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: .8;
+  }
+
+  40% {
+    opacity: .6;
+  }
+
+  60% {
+    opacity: .4;
+  }
+
+  80% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes text-dezoom {
+  0% {
+    font-size: 8em;
+  }
+
+  25% {
+    font-size: 7em;
+  }
+
+  50% {
+    font-size: 6em;
+  }
+
+  75% {
+    font-size: 5em;
+  }
+
+  100% {
+    font-size: 4em;
+  }
+}
+
+.nxt {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  right: 0;
+  bottom: auto;
+  font-size: 5vmin;
+  font-family: monospace;
+
+  color: antiquewhite;
+
+  width: fit-content;
+  height: fit-content;
+
+  margin: auto;
+
+  animation: fade-out 5s linear, text-dezoom 5s linear;
+}

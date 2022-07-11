@@ -1,0 +1,14 @@
+.lifeImg{
+    width: 7vmin;
+    height: 7vmin;
+}
+
+#lifes{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 1vmin;
+    right: 1vmin;
+    height:fit-content;
+    width: fit-content;
+}

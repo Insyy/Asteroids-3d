@@ -1,0 +1,11 @@
+Model Information:
+* title:	Hollow Asteroid
+* source:	https://sketchfab.com/3d-models/hollow-asteroid-5b0de57987fe471fbbe67e4105a88aea
+* author:	Somersby (https://sketchfab.com/Somersby)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Hollow Asteroid" (https://sketchfab.com/3d-models/hollow-asteroid-5b0de57987fe471fbbe67e4105a88aea) by Somersby (https://sketchfab.com/Somersby) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

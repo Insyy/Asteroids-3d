@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>ASTEROID 3D</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" href="./rapport/images/asteroid.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="./rapport/images/asteroid.svg" />
+
+    <link href="./src/css/AsteroidGame.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/score.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/gameName.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/help.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/gameOver.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/nextLevelMessage.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/lifes.css" rel="stylesheet" type="text/css" />
+    <link href="./src/css/jokers.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet"></head>
+
+<body>
+    <div id="AsteroidGame">
+        <section id="loading-screen">
+            <div id="loader"></div>
+        </section>
+    </div>
+</body>
+
+<!-- Librairies THREE.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.js"></script>                             -->
+<script src="http://threejs.org/examples/js/controls/TrackballControls.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/textures/CubeTexture.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/loaders/CubeTextureLoader.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/loaders/TextureLoader.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/materials/SpriteMaterial.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/math/Box3.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/helpers/BoxHelper.js"></script>
+<script type="module" src="https://unpkg.com/three@0.128.0/src/helpers/Box3Helper.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/Pass.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/math/OBB.js"></script>
+
+<!-- Librairie three-nebula pour la gestion des particules dans THREE.JS -->
+<script src='https://cdn.jsdelivr.net/npm/three-nebula@10.0.3/build/three-nebula.js'></script>
+<script type="text/javascript" language="javascript" src="./src/medias/models/emitters/particles.js"></script>
+
+<!--Librarie Howler pour la gestion de l'audio  -->
+<script src="https://cdn.jsdelivr.net/npm/howler@2.0.15/dist/howler.core.min.js"></script>
+<!-- html2canvas -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+<!-- Code personnel -->
+<script src="./src/js/game.js"></script>
+<script src="./src/js/timers.js"></script>
+<script src="./src/js/inputLogic.js"></script>
+<script src="./src/js/managers/modelManager.js"></script>
+<script src="./src/js/managers/collisionsManager.js"></script>
+<script src="./src/js/managers/soundsManager.js"></script>
+<script src="./src/js/managers/jokerManager.js"></script>
+<script src="./src/js/managers/UImanager.js"></script>
+<script src="./src/js/levels.js"></script>
+<script src="./src/lib/intervalTimer.js"></script>
+<script src="./src/lib/timeoutTimer.js"></script>
+<script src="./src/js/objects/inertialObject.js"></script>
+<script src="./src/js/objects/spaceCraft.js"></script>
+<script src="./src/js/objects/enemySpacecraft.js"></script>
+<script src="./src/js/objects/asteroid.js"></script>
+<script src="./src/js/ammoTypes/missile.js"></script>
+<script src="./src/js/ammoTypes/plasmaGrenade.js"></script>
+<script src="./src/js/objects/joker.js"></script>
+<script src="./src/js/animations/explosion.js"></script>
+<script src="./src/js/animations/spacecraftTrail.js"></script>
+
+</html>

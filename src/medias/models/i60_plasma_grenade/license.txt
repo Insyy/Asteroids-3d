@@ -1,0 +1,11 @@
+Model Information:
+* title:	I60 Plasma Grenade
+* source:	https://sketchfab.com/3d-models/i60-plasma-grenade-f3e7b4a609404724945b12831cc2d864
+* author:	Aryx3D (https://sketchfab.com/Aryx3D)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "I60 Plasma Grenade" (https://sketchfab.com/3d-models/i60-plasma-grenade-f3e7b4a609404724945b12831cc2d864) by Aryx3D (https://sketchfab.com/Aryx3D) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

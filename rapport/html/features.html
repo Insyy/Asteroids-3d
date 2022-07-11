@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ASTEROID GAME IN 3D">
+    <meta name="author" content="Alonso Ivan">
+    <link rel="icon" href="../images/asteroid.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/asteroid.svg" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>ASTEROID 3D</title>
+
+
+    <!-- Custom styles for this template -->
+    <link href="../css/features.css" rel="stylesheet">
+</head>
+
+<body class="text-center" id="home">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand"><a href="../../rapport.html">ASTEROID 3D</a></h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="../../rapport.html">Home</a>
+                    <a class="nav-link active" href="features.html">Features</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <div>
+                <h1 class="cover-heading">How does it work?</h1>
+                <p class="lead">This section consists of a review of every aspect of the game, from the technologies
+                    used
+                    to develop the game to every little detail of the game.</p>
+
+
+
+                <h2>Course of the game</h2>
+                <p>The game welcomes the player with the following starting screen.</p>
+                <img class="img-fluid" src="../images/all-menu.png" alt="all-menu">
+                <p>The player will be able to read the help about the game controls (which can be toggled with the H
+                    key),
+                    open the credits section, settings section and finally start the game by clicking on the Play
+                    button.
+                </p>
+                <p>The player begins the game with three lifes, and navigates through the levels while he still has
+                    lifes left. </p>
+                <p>A level is automatically finished when the are no remaining asteroids or enemy entities in the level.
+                </p>
+                <p>When the last level is reached or the player dies, a message is displayed stating 'Game over' and the
+                    score of the player is shown.</p>
+                <p>A flashing message indicates the player that he can either click or press any key to go back to the
+                    initial menu.</p>
+                <img class="img-fluid" src="../images/gameover.png" alt="gameover">
+                <img class="img-fluid" src="../images/congrats_gameover.png" alt="congratulations-gameover">
+                <p>Of course, we only congratulate the player if he completes the last level, thus completing the game!
+                </p>
+
+
+
+                <h2>Technologies used</h2>
+                <p>The game runs in any web browser and displays 3D graphics using WebGL.</p>
+                <p>Here is the list of all the technologies and librairies that were used in the making of the game:</p>
+                <div>
+                    <a href="https://threejs.org/" class="lead">Three.js</a>
+                    <p>An easy to use, lightweight, cross-browser, general purpose 3D library.</p>
+                    <a href="https://three-nebula.org/" class="lead">three nebula</a>
+                    <p>A WebGL based 3D particle system engine for three.js. I used to create the trail of the
+                        spacecraft's engine</p>
+                    <a href="https://howlerjs.com/" class="lead">Howler</a>
+                    <p>Howler is an Audio library for the modern web.
+                        howler.js makes working with audio in JavaScript easy and reliable across all platforms.</p>
+                    <a href="https://html2canvas.hertzen.com/" class="lead">html2canvas</a>
+                    <p>JavaScript library used to take a screnshot of a web page. Converts any element to a canvas,
+                        which can then be converted to an image.</p>
+                    <p class="lead"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> and <a
+                            href="https://en.wikipedia.org/wiki/CSS">CSS</a></p>
+                    <p>Used to build the user interface and layout elements and, in general, makes both this page and
+                        the game's page possible.</p>
+                </div>
+
+
+
+                <h2>3D Graphics window</h2>
+                <p>The size of the window changes dynamically depending on the window's width and height.</p>
+                <p>Swiching to full screen is possible with the F key.</p>
+                <p>Although the screen capture does not work all the time for some reason I have yet to discover,
+                    it is implemented and can be used with the P key.</p>
+
+
+
+                <h2>Architecture</h2>
+                <p>It is possible to differentiate different
+                    types of classes in the game, each serving a different purpose.</p>
+                <div>
+                    <p class="lead">The main game activity</p>
+                    <p>It is the main class and contains most of the functionalities,
+                        and controls the main logic of the game.</p>
+                    </p>
+                    <p class="lead">"Inertial" objects</p>
+                    <p>These objects are the ones that appear on the screen and the
+                        user can interact with them, in one way or another. They exist in the 3D scene
+                        and posess a 3D 'hit-box'.
+                        Example: Asteroids, spacecraft, or even the ammo that the spacecrafts shoot.
+                    </p>
+                    <p class="lead">Managers</p>
+                    <p>These objects are by the Game class for various purposes. For example, the model manager
+                        is charged with loading and then serving the game with 3D models, whenever they are needed.
+                        Same thing with the sound manager or the UI manager.
+                    </p>
+                    <p class="lead">Animations</p>
+                    <p>These classes control the various animation effects present in the game,
+                        mainly the explosions and the spacecraft's engine trail.
+                    </p>
+                </div>
+
+
+
+                <h2>Graphics</h2>
+                <p>All the game entities, excluding the joker's sprites, are represented by free 3D models that I have
+                    found mainly on <a href="https://sketchfab.com/">sketchfab</a>.
+                    These models are all on the GLTF format and are loaded using Threejs's GLTFLoader.
+                </p>
+                <p>
+                    The background is a 3D skybox, which means that the spacecraft is placed inside a cube
+                    with 6 faces, each corresponding to a different image, and gives the impression that
+                    the spacecraft is inside a real galaxy. This technique is much more realistic than putting
+                    a simple image into the background.
+                </p>
+                <p>The particles of the trail are designed by hand in the three-nebula desktop software.</p>
+                <p>Below is an example of what the creation of theses particles look inside this software.</p>
+                <img class="img-fluid" src="../images/nebula-particles-creation.png" alt="nebula-particles-creation">
+                <p>And here is the result ingame</p>
+                <img class="img-fluid" src="../images/particles.png" alt="particles">
+                <img class="img-fluid" src="../images/trail.png" alt="trail">
+                <p>Explosions are created by spawning a 3D explosion model, slowly scaling it to the
+                    desired size and then slowly decreasing opacity until it disappears completely.
+                </p>
+                <p>Below is the example of an explosion of an asteroid.</p>
+                <img class="img-fluid" src="../images/explosion.png" alt="explosion">
+                <p>The game also includes a bloom effect which can be toggled on or off from the settings menu.</p>
+
+
+
+
+                <h2>User interface</h2>
+                <p class="lead">
+                    There are various elements that the player can see that will give him
+                    very important information about the game and it's progress, and the ability
+                    to modify the game's settings.</p>
+                <p>
+                    By pressing the Escape key, the player can access the settings at any point in time.
+                </p>
+                <img class="img-fluid" src="../images/menu.png" alt="menu">
+                <p>Pressing the Escape key from the main menu.</p>
+                <img class="img-fluid" src="../images/ingame-menu.png" alt="ingame-menu">
+                <p>Pressing the Escape key in-game will not show the Play button.</p>
+                <p>From the settings, the player can toggle the debug mode, the bloom mode, wether the sound is muted or
+                    not
+                    , and even the input mode of the player. The game supports both QWERTY and AZERTY keyboards.</p>
+                <img class="img-fluid" src="../images/settings.png" alt="settings">
+                <p>In the lower-left corner there's the help window, which can be toggled on or off with the H key.</p>
+                <p>The content of the help window changes according to the selected input mode, as shown below.</p>
+                <img class="img-fluid" src="../images/help-qwerty.png" alt="help-qwerty">
+                <p>QWERTY input type is selected.</p>
+                <img class="img-fluid" src="../images/help-azerty.png" alt="help-azerty">
+                <p>AZERTY input type is selected.</p>
+                <p>In the upper-left corner there's the player's score, as shown below.</p>
+                <img class="img-fluid" src="../images/score.png" alt="score">
+                <p>In the upper-right corner there's the player's lifes count, as shown below.</p>
+                <img class="img-fluid" src="../images/life-count.png" alt="life-count">
+                <p>Right below the player's lifes count, there's a place where a help is shown wherever
+                    the player has picked up a joker. It informs the player about what he has picked,
+                    and the use of the joker. It works as shown below.
+                </p>
+                <img class="img-fluid" src="../images/joker-list.png" alt="joker-list">
+                <p>When the player reaches a new level, the game is briefly frozen in order to let the player prepare
+                    for the next one.
+                    During this time, a message pops up and then fades away indicating the new
+                    level the player is about to face.
+                </p>
+                <p>Below is an example of the next level message</p>
+                <img class="img-fluid" src="../images/next level.png" alt="next level">
+                <p>As mentionned previously, the 'Game over' message pops up whenever the player has died
+                    or whenever he has completed the game.
+                </p>
+                <h2>Camera points of view</h2>
+                <p>The game offers three different camera points of view, accessible with the keys 0, 1 and 2.</p>
+                <p>Camera 0: a fixed camera in relation to the stage</p>
+                <p>Camera 1: a mobile camera attached to the main player's ship</p>
+                <p>Camera 2: a chase mode where the ship always stays in the center
+                    of the field whatever its movements.
+                    All the other objects move accordingly, as if the camera remained focused on the ship.</p>
+
+
+                <h2>Collision management</h2>
+                <p class="lead">All the collisions are taken care by the collisions manager.
+                    These collisions are detected using 3d 'hit-boxes' called "Box3" and are used to detect collisions.
+                The player can see these boxes by setting the Debug mode active.</p>
+                <p>The missiles disappear when they hit an asteroid and cause an explosion.</p>
+                <p>The spacecraft explodes if it gets hit by an asteroid or an enemy ship missile.</p>
+                <p>The hit asteroids burst into several pieces with somewhat realistic trajectories.</p>
+                <p>The asteroids can collide with eachother causing it's trajectories to change.</p>
+
+
+
+                <h2>Dynamics of the game</h2>
+                <p>At the beginning, the asteroids acquire a random velocity, size and rotation angle speed,
+                    which they preserve through the level.</p>
+                <p> The spacecraft's movements are realistic and correspond to a 0g environment, in which
+                    it preserves momentum forces and acceleration, and no slowing forces are applied.
+                    There is of course a maximum speed one can reach.
+                </p>
+                <p>The ship is created in the center of the screen. It can turn, move forward or brake with the keys.
+                </p>
+                <p>The spacecraft fires missiles with the space bar.
+                    These missiles lose their ability to destroy beyond a certain distance.</p>
+                <p>The game board is periodic: an object passing by an edge, excepting the missiles, reappears at the
+                    opposite edge.</p>
+                <p></p>
+                <p class="lead">Each level increases in difficulty by the following factors:</p>
+                <p>Number of asteroids at the start of the level. Increases with each level.</p>
+                <p>Number of enemy spacecrafts at the start of the level. Increases with each level.</p>
+                <p>Number of asteroids spawned on an asteroid destruction. Increases with each level.</p>
+                <p>Interval of the generation of Jokers. Decreases with each level. Is supposed to be the only
+                    element that helps the player.
+                </p>
+
+
+
+                <h2>Jokers</h2>
+                <p class="lead">Joker objects with superpowers appear regularly on the board.
+                    They must be picked up by the spacecraft to act,
+                    but their effect is limited in time for the most part.
+                    They are managed by the Joker manager. Here is a list
+                    of the available Jokers:</p>
+                <div class="d-flex flex-row justify-content-center">
+                    <img style="width: 3vmin; height: 3vmin; margin-right:2vmin;"
+                        src="../images/Jokers/invincibility.png" alt="invincibility">
+                    <p>Temporal invincibility</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img style="width: 3vmin; height: 3vmin; margin-right:2vmin;" src="../images/Jokers/big-weapon.png"
+                        alt="big-weapon">
+                    <p>Plasma grenades</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img style="width: 3vmin; height: 3vmin; margin-right:2vmin;"
+                        src="../images/Jokers/double-points.png" alt="double-points">
+                    <p>Double points</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img style="width: 3vmin; height: 3vmin; margin-right:2vmin;"
+                        src="../images/Jokers/faster-shooting.png" alt="faster-shooting">
+                    <p>Faster shooting</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <img style="width: 3vmin; height: 3vmin; margin-right:2vmin;" src="../images/Jokers/health.png"
+                        alt="health">
+                    <p>Restore health</p>
+                </div>
+
+
+
+                <h2>Sound and music</h2>
+                <p class="lead">All sounds and music present in this game come from <a
+                        href="https://freesound.org/">freesound</a>
+                    and can be muted at any moment from the menu.</p>
+                <p class="lead">Here is the list of all the used sounds in the game:</p>
+                <p>Missile launch sound.</p>
+                <p>Plasma grenade launch sound.</p>
+                <p>Impact sound.</p>
+                <p>Destruction sound.</p>
+                <p>Menu music.</p>
+                <p>Level 1 music.</p>
+                <p>Level 2 music.</p>
+                <p>Level 3 music.</p>
+                <p>Level completed sound.</p>
+                <p>Game over sound.</p>
+                <p>Joker picked up sound.</p>
+                <h2>Cheats</h2>
+                <p class="lead">Cheats are here for the players that do not have what it takes to play! (or simply not
+                    enough time).</p>
+                <p class="lead">Here is the list of available cheats and it's corresponding keys.</p>
+                <p>Key I : infinite invincibility! The bad asteroids pass "through"
+                    the nice spacecraft without damaging it.</p>
+                <p>Key J : next joker! It's as if the spacecraft has 
+                    just picked up a joker that gives it the next superpower. (Allows you to debug and try them all).</p>
+                <p>Key K : kill them all! Pressing 'k' has the same effect as if all enemy asteroids and spacecraft 
+                    had just been hit by a nice missile. This makes it easier to move on to the next level.
+                     However, no points are earned through this shameful feint.</p>
+
+                     <h2>Little extras!</h2>
+                     <p class="lead">Here are some things that I have not been able to 
+                         add previously about the game. Most of the extra features are described previously though.
+                     </p>
+                     <p>The pause functionality works perfectly thanks to the implementation
+                         of a pausable TimeoutTimer and a pausable IntervalTimer. When the game is paused, 
+                         every timer running is paused, and resumed when the pause is over!
+                     </p>
+                     <p>The game recognizes both upper case letters and lower case letters.
+                         This means that you will still be able to play the game even if you accidentally hit the Block Uppercase button!
+                     </p>
+                     <p>When paused, the player is free to click on the window and move the camera around. 
+                         Discover the world behind you!
+                     </p>
+                     <p></p>
+            </div>
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Website developed by Ivan Alonso @ <a href="https://www.univ-pau.fr/fr/index.html"
+                        target="UPPA">UPPA</a></p>
+                <p>Sources available <a href="https://github.com/Insyy/Asteroids-3d">here</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
